@@ -1,0 +1,41 @@
+
+.bank-form {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fc;
+  border-radius: 12px;
+}
+
+.bank-form h1 {
+  color: #17365d;
+}
+
+.bank-form label {
+  display: block;
+  margin: 20px 0 8px;
+}
+
+.bank-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.bank-form button {
+  margin-top: 18px;
+  padding: 12px 20px;
+  background-color: #1769aa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bank-form button:hover {
+  background-color: #104c80;
+}
