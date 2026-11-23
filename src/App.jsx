@@ -313,12 +313,3 @@ export default function App() {
     <AuthScreen onAuthenticated={handleAuthenticated} />
   );
 }
-=======
-import Dashboard from "./pages/Dashboard";
-
-function App() {
-  return <Dashboard />;
-}
-
-export default App;
->>>>>>> 120bae5cf5363c3bd17a6ef03f0cd2d6787f296f
