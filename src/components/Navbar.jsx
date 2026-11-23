@@ -1,6 +1,14 @@
 import "../styles/Navbar.css";
 
-function Navbar() {
+function Navbar({ user, onLogout }) {
+  const fullName = user?.name || "User";
+  const initials = fullName
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
+
   return (
     <header className="navbar">
       <div className="navbar-inner">
@@ -14,13 +22,15 @@ function Navbar() {
 
         <div className="nav-right">
           <div className="user-chip">
-            <span className="avatar">JD</span>
+            <span className="avatar">{initials}</span>
             <div className="user-info">
-              <strong>John Doe</strong>
+              <strong>{fullName}</strong>
               <small>Premium Member</small>
             </div>
           </div>
-          <button className="logout-btn">Logout</button>
+          <button onClick={onLogout} className="logout-btn">
+            Logout
+          </button>
         </div>
       </div>
     </header>

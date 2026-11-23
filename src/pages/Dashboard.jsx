@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Dashboard.css";
 
-function Dashboard() {
+function Dashboard({ user, onLogout }) {
   const [accounts, setAccounts] = useState([
     { number: 1001, type: "SAVINGS", balance: 25000 },
     { number: 1002, type: "CHECKING", balance: 5000 },
@@ -139,13 +139,13 @@ function Dashboard() {
 
   return (
     <div className="page">
-      <Navbar />
+      <Navbar user={user} onLogout={onLogout} />
 
       <main className="dashboard">
         {/* Greeting */}
         <section className="welcome">
           <h1>
-            {greeting}, John <span className="wave">👋</span>
+            {greeting}, {user?.name?.split(" ")[0] || "User"} <span className="wave">👋</span>
           </h1>
           <p>Here is what is happening with your money today.</p>
         </section>
